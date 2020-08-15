@@ -1,0 +1,1507 @@
+<!doctype html>
+<html>
+<style>
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS styles go here */
+        .widthColor {
+            background-color:#ffa500;
+        }
+    }
+
+    #quoteCountDown {
+        position: absolute;
+        right: 15px;
+        bottom: -1px;
+        font-size: small;
+        font-weight: 700;
+    }
+</style>
+<head>
+    <script>document.domain = "transdirect.com.au"</script>
+    <script type="text/javascript" async src="/api/locations/script"></script>
+    <script type="text/javascript" src="//use.typekit.net/gev8jim.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c29935b8b3",applicationID:"35504947"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1173.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>    <title>Couriers, Freight & Shipping Services in Australia | Get Quote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Compare and calculate the cost of delivery solutions in Australia with Transdirect. Get quick shipping, courier and freight quotes for Australia online now!">
+
+	<script type="text/javascript" src="/js/quotes/scripts.js?v=19"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.frontend.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/flags.css" />
+    <link rel="stylesheet" type="text/css" href="/css/countrySelect.css" />
+    <link rel="stylesheet" type="text/css" href="/css/select2.min.css?v=2" />
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.4/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <script src="//cdn.rawgit.com/noelboss/featherlight/1.3.4/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/select2.full.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css/style.new.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css/intlTelInput.css" />
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" type="text/css" href="/css/ie9.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="/quotes/js/libs/html5.js"><\/script>')</script>
+    <![endif]-->
+    <!-- <link href="/favicon.ico" title="Icon" type="image/x-icon" rel="icon" />
+	<link href="/favicon.ico" title="Icon" type="image/x-icon" rel="shortcut icon" /> -->
+    <link href="/favicon.png" title="Transdirect" type="image/png" rel="icon">
+	<link href="/favicon.png" title="Transdirect" type="image/png" rel="shortcut icon">
+    
+        <!-- Hotjar Tracking Code for https://www.transdirect.com.au/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:286107,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!-- End Hotjar Tracking Code -->
+        <!-- Start Visual Website Optimizer Asynchronous Code -->
+    <script type='text/javascript'>
+        var _vwo_code=(function(){
+            var account_id=191609,
+                settings_tolerance=2000,
+                library_tolerance=2500,
+                use_existing_jquery=false,
+                /* DO NOT EDIT BELOW THIS LINE */
+                f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+    </script>
+    <!-- End Visual Website Optimizer Asynchronous Code -->
+
+    <!-- TrustBox script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+    <!-- End TrustBox script -->
+</head>
+<body class="page">
+
+	    <!-- Google Tag Manager -->
+    <noscript>
+	    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WJD4P2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WJD4P2');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5698511-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+      gtag('config', 'UA-5698511-1');
+        // Log payment related errors in google analytics
+                
+        // Log errors in google analytics
+                    </script>
+    <!-- End Google Analytics -->
+            <header class="header">
+        <div class="container">
+            <div class="navbar navbar-default header-inner">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand" onclick="gtag('event', 'Home', {'event_category' : 'Quotes'});"></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navi" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navi">
+                    <ul id="menu-header-menu-new" class="nav navbar-nav">
+                        <li class="dropdown"><a title="Our Services" href="/services/" class="dropdown-toggle">Our Services <span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a title="Expert interstate couriers in Australia" href="/services/interstate-couriers/">Expert interstate couriers in Australia</a></li>
+                                <li><a title="Same Day Delivery" href="/services/same-day-delivery/">Same Day Delivery</a></li>
+                                <li><a title="Next Day/Overnight Delivery" href="/services/next-day-delivery/">Next Day/Overnight Delivery</a></li>
+                                <li><a title="Parcel Delivery " href="/services/parcel-delivery/">Parcel Delivery</a></li>
+                                <li><a title="Parcel Point" href="/services/parcel-point/">Parcel Point</a></li>
+                                <li><a title="New Features" href="/features/">New Features</a></li>
+                                <li><a title="Pallet Transport Services" href="/services/pallet-transport-services/">Pallet Transport</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a title="Couriers" href="/courier/" class="dropdown-toggle">Couriers <span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a title="Allied Express" href="/courier/allied-express/">Allied Express</a></li>
+                                <li><a title="Couriers Please" href="/courier/couriers-please/">Couriers Please</a></li>
+                                <li><a title="Direct Couriers" href="/courier/direct-couriers/">Direct Couriers</a></li>
+                                <li><a title="Fastway" href="/courier/fastway/">Fastway</a></li>
+                                <li><a title="Northline" href="/courier/northline/">Northline</a></li>
+                                <li><a title="Parcel Point" href="/services/parcel-point/">Parcel Point</a></li>
+                                <li><a title="Sampson Express" href="/courier/sampson-express-transdirect-courier-services/">Sampson Express</a></li>
+                                <li><a title="TNT" href="/courier/tnt/">TNT</a></li>
+                                <li><a title="Toll" href="/courier/toll/">Toll</a></li>
+                                <li><a title="Toll Priority" href="/courier/toll-priority/">Toll Priority</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a title="Education" href="/education/" class="dropdown-toggle">Education <span class="caret"></span></a>
+                            <ul role="menu" class=" dropdown-menu">
+                                <li><a title="FAQ's" href="/education/faqs/">FAQ’s</a></li>
+                                <li><a title="Testimonials" href="/education/testimonials/">Testimonials</a></li>
+                                <li><a title="Transit Insurance Options" href="/education/transit-insurance/">Transit Insurance Options</a></li>
+                                <li><a title="Packaging Requirements" href="/education/requirements/">Packaging Requirements</a></li>
+                                <li><a title="Account Enquiries" href="/education/account-enquiries/">Account Enquiries</a></li>
+                                <li><a title="Tracking" href="/education/tracking/">Tracking</a></li>
+                                <li><a title="eBay Shipping" href="/education/ebay-shipping/">eBay Shipping</a></li>
+                                <li><a title="eCommerce Integration" href="/education/ecommerce/">eCommerce Integration</a></li>
+                                <li><a title="Developers Centre" href="/education/developers-centre/">Developers Centre</a></li>
+                                <li><a title="Blog" href="/blog/">Blog</a></li>
+                                <li><a title="Client Case Studies" href="/case-studies">Client Case Studies</a></li>
+                                <li><a title="Shipping Made Easy Ebook" href="/shipping-made-easy">Shipping Made Easy Ebook</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a title="Locations" href="/locations/" class="dropdown-toggle">Locations <span class="caret"></span></a>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a title="Melbourne" href="/locations/melbourne/">Melbourne</a></li>
+                                <li><a title="Sydney" href="/locations/sydney/">Sydney</a></li>
+                                <li><a title="Brisbane" href="/locations/brisbane/">Brisbane</a></li>
+                                <li><a title="Perth" href="/locations/perth/">Perth</a></li>
+                                <li><a title="Adelaide" href="/locations/adelaide/">Adelaide</a></li>
+                                <li><a title="Gold Coast" href="/locations/gold-coast/">Gold Coast</a></li>
+                                <li><a title="Sunshine Coast" href="/locations/sunshine-coast/">Sunshine Coast</a></li>
+                                <li><a title="Canberra" href="/locations/canberra/">Canberra</a></li>
+                                <li><a title="Hobart" href="/locations/hobart/">Hobart</a></li>
+                                <li><a title="Darwin" href="/locations/darwin/">Darwin</a></li>
+                                <li><a title="Geelong" href="/locations/geelong/">Geelong</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-1643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="/contact-us/" title="Contact Us">Contact Us</a></li>
+                    </ul>
+                    <div class="navbar-right">
+                        <ul class="nav navbar-btn">
+                                                            <li><a href="/education/account-enquiries/" class="btn btn-primary btn-sm">Open an account</a></li>
+                                                    </ul>
+                        <ul class="nav navbar-btn">
+                            <li><a href="/quotes" class="btn btn-warning btn-sm">Get a quote</a></li>
+                                                            <li><a href="/members/login?redirect=https%3A%2F%2Fwww.transdirect.com.au%2Fquotes%2Fbookings%2F11663188%2Fquotes"
+                                       onclick="gtag('event', 'Sign In', {'event_category' : 'Quotes'});" class="btn btn-primary btn-sm">SIGN IN</a></li>
+                                                    </ul>
+                        <!--<div class="text-right">
+                                                    </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <style type="text/css" media="screen">
+    .table .table-data td {
+        padding-left: 8px!important;
+        padding-right: 8px!important;
+        border-top: 1px solid #b4b0b0 !important;
+    } 
+    .multipickup_tab .total-price{
+        display: inline-block !important;
+        padding-top: 4px !important; 
+    } 
+    .multipickup_min_label{
+        font-size: 12px;
+        font-weight: bold;
+        color: #373a44;
+        line-height: 0;
+    }
+    .data-price > form > .price{
+        margin-left: 10px;
+    }
+    .multipickup_tab label{
+        cursor: pointer;
+        display: inline;
+    }
+    .gray-border-bottom{
+        border-bottom: 1px solid #b4b0b0
+    }
+    .no-margin-bottom{
+        margin-bottom: 0;
+    }
+    .gray-border-top{
+        border-top: 1px solid #b4b0b0;
+        padding-top: 24px;
+    }
+    div.data-content {
+        position: relative !important; 
+        padding: 0px !important
+    }
+
+    div.data-content .disabled {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.data-content .disabled > p {
+        vertical-align: middle;
+        display: inline-table;
+        position: relative;
+        margin: auto;
+    }
+    .delay-warning {
+        font-size: 12px; padding-left: 20px;
+    }
+</style>
+<div class="main">
+    <div class="container">
+        <div class="main-heading">&nbsp;</div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="quote-box">
+                <div class="quote-box-content">
+                    <div class="timeline">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/quotes/bookings/11663188">1. Package Details <span class="icon-check-ok"></span></a>
+                            </li>
+                            <li class="active">2. Select Quote <span class="icon-check-ok"></span></li>
+                            <li class="inactive">3. Collection Details <span class="icon-check-ok"></span></li>
+                            <li class="inactive">4. Additional Information <span class="icon-check-ok"></span></li>
+                            <li class="inactive">5. Payment <span class="icon-check-ok"></span></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning widthColor" role="progressbar" aria-valuenow="40"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr-only">40% Complete (warning)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-quote">
+                                                                        <div id="block-insurance" class="row hidden">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-lg-5">&nbsp;</div>
+                                <div class="col-lg-7">
+                                    <div class="input-form">
+                                        <form id="frm-insurance" action="#" method="post" role="form" class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Insurance Value</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-group">
+                                                        <input id="txt-insurance" type="text" class="form-control" data-a-sign="$"
+                                                               placeholder="$0.00" value="">
+                                                        <button id="btn-calculate-insurance" type="submit" class="btn btn-primary">CALCULATE</button>
+                                                        <span class="note hidden">Please see maximum insurable amounts for each carrier below.</span>
+                                                        <span class="pull-right"><a id="link-remove-insurance" href="#">remove insurance</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <h5 class="pull-left" style="margin-right:10px">SORT BY:</h5>
+                                <div class="sort-btn">
+                                    <button type="button" class="btn btn-warning btn-sort btn-price" id="price" onclick="sortQuotes('price'); gtag('event', 'Sort Price', {'event_category' : 'Quotes'});">Price</button>
+                                    <button type="button" class="btn btn-default btn-sort btn-delivery" id="delivery" onclick="sortQuotes('delivery'); gtag('event', 'Sort delivery', {'event_category' : 'Quotes'});">Delivery Speed</button>
+                                    <button type="button" class="btn btn-default btn-sort btn-pickup" id="pickup" onclick="sortQuotes('pickup'); gtag('event', 'Sort collection', {'event_category' : 'Quotes'});">Earliest Collection</button>
+                                    <button  onclick="gtag('event', 'Save  Quote', {'event_category' : 'Quotes'});"  id="btn-save-quote"  class="btn  btn-warning btn-get-quote pull-right save-quote-main"  tabindex="10" disabled>Save this Quote
+                                        </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="security[token]" value="$2a$10$JcPPuzBjrPmbUaP0uSFTP.mqjC3ZhnV/tLUISy8TUKXODrQ/5mwsa" />                        <h4>Please select from the list of available services:</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-data-disabled no-margin-bottom">
+                                <thead>
+                                <tr>
+                                    <td>
+                                        <table class="table-data">
+                                            <tr>
+                                                <th class="data-carrier">Carrier</th>
+                                                <th class="data-time">Estimated Delivery Time - Business days ONLY</th>
+                                                <th class="data-pickup">Earliest Pickup/Parcel Drop</th>
+                                                <th class="data-insurance">Insurance Value</th>
+                                                <th class="data-price">Price</th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </thead>
+                                <tbody id="list-quotes">
+                                                                <tr id="loader-allied"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-allied_pallet"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-couriers_please_domestic_proirity_authority"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-couriers_please_domestic_proirity_signature"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-direct_couriers_elite"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-direct_couriers_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-direct_couriers_regular"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-fastway"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-go_people"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-northline"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-parcel_point_send"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-sampson_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-tnt_nine_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-tnt_overnight_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-tnt_road_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-tnt_ten_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-tnt_twelve_express"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-toll"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-toll_priority_international_import"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-toll_priority_overnight"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <tr id="loader-toll_priority_sameday"><td colspan="5"><img src="/images/ajax-loader.gif" alt="Loading..."></td></tr>
+                                                                <div class="data-content">
+                                    <table class="table-data hidden-sm hidden-xs gray-border-top">
+                                        <tbody><tr>
+                                            <td class="data-carrier"><div style="width:224px"></div></td>
+                                            <td class="data-time" colspan="2">* Delays can occur in regional areas.</td>
+                                        </tr>
+                                        </tbody></table>
+                                </div>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .save-quote{
+        margin-top:  10px;
+        margin-left:  5px;
+        padding:  0;
+    }
+    .save-quote-loader{
+        margin-left:  5px;
+        margin-top:  5px;
+    }
+    #modal-save-quote,
+    #modal-get-email{
+        z-index: 11000;
+        margin-top: 60px;
+    }
+    #confirm-document-only{
+        z-index: 11000;
+        margin-top: 60px;
+    }
+    #modal-get-email label.error{
+        color: #b94a48;
+    }
+    #modal-get-email .form-group .control-label{
+        display: none;
+    }
+    .multipickup_tab{
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin-left: 0px !important;
+        width:auto;
+        text-align: center;
+        line-height: 17px;
+
+    }
+    .multipickup_header {
+        font-size: 14px
+    }
+    .multipickup_price{
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .multipickup_inc{
+        float: none;
+        font-size: 12px;
+    }
+    .multipickup_radio{
+        cursor: pointer !important;
+    }
+    .table .data-carrier {
+        width: 18% !important;
+    }
+    .table .data-time {
+        width: 14% !important;
+    }
+</style>
+<!-- TODO: move to separate script -->
+<script type="text/javascript">
+    $("#courier-tab").change(function(){
+        $($(".tab-content").find(".active")).removeClass("active");
+        $("#"+$(this).val()).addClass("active");
+    });
+
+    // check hash tag if anchored for insurance
+    if (window.location.hash == '#insurance') {
+        $('#block-insurance').removeClass('hidden');
+        $('#txt-insurance').focus();
+    }
+
+    var tailgateCosts = {"allied":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"couriers_please":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"toll":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"toll_priority":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"toll_priority_overnight":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"toll_priority_sameday":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"northline":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"fastway":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"mainfreight":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_nine_express":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_ten_express":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_twelve_express":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_road_express":{"pickup":0,"delivery":0,"singleCharge":0,"newPrice":1},"tnt_overnight_express":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_economy_express_export":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_economy_express_import":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_economy_express_document_export":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_economy_express_document_import":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_express_export":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_express_document_export":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_express_document_import":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"tnt_international_express_import":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"toll_priority_international_export":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"toll_priority_international_document_export":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"direct_couriers":{"pickup":250,"delivery":250,"singleCharge":0,"newPrice":0},"direct_couriers_regular":{"pickup":250,"delivery":250,"singleCharge":1,"newPrice":0},"direct_couriers_express":{"pickup":250,"delivery":250,"singleCharge":1,"newPrice":0},"direct_couriers_elite":{"pickup":250,"delivery":250,"singleCharge":1,"newPrice":0},"couriers_please_domestic_proirity_authority":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"couriers_please_domestic_proirity_signature":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"allied_pallet":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"parcel_point_send":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"sampson_express":{"pickup":0,"delivery":0,"singleCharge":0,"newPrice":0},"go_people":{"pickup":75,"delivery":75,"singleCharge":0,"newPrice":0},"capital_transport":{"pickup":0,"delivery":0,"singleCharge":0,"newPrice":1},"capital_transport_express":{"pickup":0,"delivery":0,"singleCharge":0,"newPrice":1},"hunter_express_road":{"pickup":70,"delivery":70,"singleCharge":0,"newPrice":0},"hunter_express_air":{"pickup":70,"delivery":70,"singleCharge":0,"newPrice":0}};
+    var insuranceData; // so we could re-use this than re-fetch
+
+    var multipickup_allowed = 0;
+    var fastway_multipickup_limit = "3";
+    var cp_multipickup_a_limit = "10";
+    var cp_multipickup_b_limit = "21";
+
+    $('#frm-insurance').on('submit', function(e){
+        $('#txt-insurance').blur();
+        var insuranceValue = $('#txt-insurance').autoNumeric('get');
+        if (!insuranceValue)
+            return false;
+
+        var url = '/quotes/bookings/' + 11663188 + '/insurance/' + insuranceValue;
+        $.get(url, function(data){
+            for (var courier in data){
+                var insurance = $('.data-' + courier).find('.data-insurance > .insurance');
+                if (insurance) {
+                    insurance.html('$' + data[courier]['value'].toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
+                }
+
+                insurance = $('.data-' + courier).find('.price > .insurance');
+                if (insurance) {
+                    insurance.html('$' + data[courier]['value'].toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') + ' insured value');
+                }
+
+                var insuranceFee = $('.data-' + courier).find('.insurance-fee');
+                if (insuranceFee && data[courier]['fee'] > 0) {
+                    insuranceFee.html('+$' + data[courier]['fee'].toFixed(2) + ' insurance fee');
+                } else {
+                    $('.data-' + courier).find('.inc').html('<span class="insurance-fee">inc GST</span>');
+                }
+
+                if (data[courier].hasOwnProperty('isMaxValue') && data[courier].isMaxValue == 1) {
+                    $('.data-' + courier).find('.data-insurance > .note').removeClass('hidden');
+                    $('.note', '#frm-insurance').removeClass('hidden');
+                } else {
+                    $('.data-' + courier).find('.data-insurance > .note').addClass('hidden');
+                    $('.note', '#frm-insurance').addClass('hidden');
+                }
+
+                // Update hidden form values for Post-ing
+                $('.data-' + courier).find('input[name="insurance-value"]').val(data[courier]['value']);
+                $('.data-' + courier).find('input[name="insurance-fee"]').val(data[courier]['fee']);
+            }
+
+            insuranceData = data;
+        });
+        return false;
+    });
+
+    $('#link-remove-insurance').on('click', function(e){
+        e.preventDefault();
+
+        $.post('/quotes/bookings/11663188/reset_insurance');
+
+        // Remove insurance fees prices
+        for (var courier in insuranceData){
+            $('.data-' + courier).find('.inc').html('<span class="insurance-fee"></span> inc GST');
+
+            // Update hidden form values for Post-ing
+            $('.data-' + courier).find('input[name="insurance-value"]').val(0);
+            $('.data-' + courier).find('input[name="insurance-fee"]').val(0);
+            $('.data-' + courier).find('.data-insurance > .note').addClass('hidden');
+        }
+
+        $('.insurance').each(function(){
+            $(this).html('<a href="#insurance" class="link-add-insurance">Add Insurance</a>');
+        });
+
+        $('.link-add-insurance').on('click', function(e){
+            $('#block-insurance').removeClass('hidden');
+            $('#txt-insurance').focus();
+        })
+
+        $('#block-insurance').addClass('hidden');
+        
+        return false;
+    });
+
+    function executeTailGate () {
+        $('.table-data').find('.total-price').not('.multi-total-price').each(function(){
+            var currentPrice = parseFloat($(this).parents('form').find('input[name="price-less-tailgate"]').val());            
+            var courier = $(this).closest('.data-content').attr('id').split('-')[1];
+            var deliveryTailGateCost = 0;
+            var pickupTailGateCost = 0;
+
+            //Add courier condition here to exclude tail lift servise e.g. CP
+            if(couriersExcludedFromTailLift.indexOf(courier) < 0 ){
+                var tailGateCost = 0;
+                // if (courier == 'tnt_road_express') {
+                //     var tnt717Bcutoff = $('input[name="tnt717bpickup"]').val();
+                //     var tntnormalcutoff = $('input[name="tntRoadExpressPickup"]').val();
+                //     if(tnt717Bcutoff != '' && ($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked"))) {
+                //         $('table.data-tnt_road_express').find('td.data-pickup').html(tnt717Bcutoff);
+                //     } else {
+                //         $('table.data-tnt_road_express').find('td.data-pickup').html(tntnormalcutoff);
+                //     }
+                // }
+                if (courier == 'sampson_express') {
+                    var pickupTG = parseFloat($(this).parents('form').find('input[name="pickuptg"]').val());
+                    var deliveryTG = parseFloat($(this).parents('form').find('input[name="deliverytg"]').val());
+                    if($('.chk-tailgate[name="pickup"]').is(":checked")){
+                        tailGateCost += pickupTG;
+                    }
+                    if($('.chk-tailgate[name="delivery"]').is(":checked")){
+                        tailGateCost += deliveryTG;
+                    }
+                } else {
+                    if(tailgateCosts[courier]['singleCharge'] == 1){
+                        if($('.chk-tailgate').is(":checked")){
+                            tailGateCost += tailgateCosts[courier]['pickup'];
+                            pickupTailGateCost = tailgateCosts[courier]['pickup'];
+                        }
+                    }else{
+                        if($('.chk-tailgate[name="pickup"]').is(":checked")){
+                            tailGateCost += tailgateCosts[courier]['pickup'];
+                            pickupTailGateCost = tailgateCosts[courier]['pickup'];
+                        }
+                        if($('.chk-tailgate[name="delivery"]').is(":checked")){
+                            tailGateCost += tailgateCosts[courier]['delivery'];
+                            deliveryTailGateCost = tailgateCosts[courier]['delivery'];
+                        }
+                    }
+                    if(tailgateCosts[courier]['newPrice'] == 1){
+                        if($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked")) {
+                            var newPrice = parseFloat($(this).parents('form').find('input[name="new-price-with-tailgate"]').val());
+                            // $(this).html('$' + newPrice.toFixed(2));
+                            currentPrice = newPrice;
+                        }
+                        // else{
+                        //     $(this).html('$' + currentPrice.toFixed(2));
+                        // }
+                    }else{
+                        if (!isNaN(parseFloat($(this).parents('form').find('input[name="manual-charge"]').val()))) {
+                            if (!$('.chk-tailgate[name="pickup"]').is(":checked") && !$('.chk-tailgate[name="delivery"]').is(":checked")) {
+                                var manualCharge = parseFloat($(this).parents('form').find('input[name="manual-charge"]').val());    
+                                currentPrice = currentPrice + (manualCharge * 1.1);
+                            }
+                        }
+                    }
+                }
+
+                currentPrice += tailGateCost;
+                $(this).html('$' + currentPrice.toFixed(2));
+                $(this).parents('form').find('input[name="total-price"]').val(currentPrice.toFixed(2));
+
+                $.each(sortedQuotes, function( k, v ) {
+                    // console.log(v.id.split('-')[1] + " == " + courier);
+                    if(v.id.split('-')[1] == courier){
+                        v.value = currentPrice;
+                    }
+                });
+                sortQuotes($(".sort-btn").find(".btn-warning")[0].id);
+            } else {
+                if($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked") ){
+                    $('#data-'+courier).hide();
+                } else {
+                    $('#data-'+courier).show();
+                }
+            }
+        });
+    }
+
+    var sortedQuotes = [];
+    var couriersList = ['allied','allied_pallet','couriers_please_domestic_proirity_authority','couriers_please_domestic_proirity_signature','direct_couriers_elite','direct_couriers_express','direct_couriers_regular','fastway','go_people','northline','parcel_point_send','sampson_express','tnt_nine_express','tnt_overnight_express','tnt_road_express','tnt_ten_express','tnt_twelve_express','toll','toll_priority_international_import','toll_priority_overnight','toll_priority_sameday'];
+    var couriersExcludedFromTailLift = ['couriers_please','couriers_please_domestic_proirity_signature','couriers_please_domestic_proirity_authority','go_people'];
+    var completedCourierCount = 0;
+    var timeStart = [];
+    var lastcourier = couriersList[couriersList.length - 1];
+    var fetchQuotes = function(courier, isLast) {
+        timeStart[courier] = new Date().getTime();
+        $.ajax({
+            url: '/quotes/bookings/11663188/quotes/' + courier,
+            method: 'POST',
+            data: {
+                security:{
+                    token: $("[name='security[token]']").val()
+                }
+            }
+        })
+            .done(function(data){
+                completedCourierCount++;
+
+                if(lastcourier == courier){
+                    $("#btn-save-quote").removeAttr('disabled');
+                }
+
+                // Checks the last loop if sortedQuotes has no quotes then append the text
+                if (completedCourierCount == couriersList.length) {
+                    if (sortedQuotes.length == 0) {
+                        $('#list-quotes').append('<tr><td colspan="5" style="padding:15px 25px !important;">Unfortunately we have no services available for this quote. Please check the details and try again.</td></tr>');
+                    }
+                }
+
+                if (data.length == 0 || data.trim() == "") {
+                    $('#loader-'+courier).remove();
+                    return;
+                }
+
+
+                $('#loader-'+courier).remove();
+
+                var quote = parseFloat($(data).filter('input[name="quote"]').val());
+                var delivery = parseFloat($(data).filter('input[name="delivery"]').val());
+                var pickup = parseFloat($(data).filter('input[name="pickup"]').val());
+
+                // Let's insert this value then sort
+                sortedQuotes.push({id: "data-"+courier, value: quote,delivery: delivery, pickup: pickup });
+
+                //new tailgate
+                // var noTgPrice = parseFloat($(data).find('input[name="price-less-tailgate"]').val());
+                // var tgCourier = $(data).closest('.data-content').attr('id').split('-')[1];
+                //Add courier condition here to exclude tail lift service e.g. CP
+                // if(couriersExcludedFromTailLift.indexOf(tgCourier) < 0 ){
+                //     var wTgPrice = noTgPrice;
+                //     var tailGateCost = 0;
+                //     if (courier == 'sampson_express') {
+                //         var pickupTG = parseFloat($(data).find('input[name="pickuptg"]').val());
+                //         var deliveryTG = parseFloat($(data).find('input[name="deliverytg"]').val());
+                //         if($('.chk-tailgate[name="pickup"]').is(":checked")){
+                //             tailGateCost += pickupTG;
+                //         }
+                //         if($('.chk-tailgate[name="delivery"]').is(":checked")){
+                //             tailGateCost += deliveryTG;
+                //         }
+                //     } else {
+                //         if(tailgateCosts[courier]['singleCharge'] == 1){
+                //             if($('.chk-tailgate').is(":checked")){
+                //                 tailGateCost += tailgateCosts[courier]['pickup'];
+                //             }
+                //         }else{
+                //             if($('.chk-tailgate[name="pickup"]').is(":checked")){
+                //                 tailGateCost += tailgateCosts[courier]['pickup'];
+                //             }
+                //             if($('.chk-tailgate[name="delivery"]').is(":checked")){
+                //                 tailGateCost += tailgateCosts[courier]['delivery'];
+                //             }
+                //         }
+
+                //         if(tailgateCosts[courier]['newPrice'] == 1){
+                //             if($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked")) {
+                //                 var newPrice = parseFloat($(data).find('input[name="new-price-with-tailgate"]').val());
+                //                 $(".data-"+tgCourier).find('.total-price').html('$' + newPrice.toFixed(2));
+                //                 wTgPrice = newPrice;
+                //             }else{
+                //                 $(".data-"+tgCourier).find('.total-price').html('$' + noTgPrice.toFixed(2));
+                //             }
+                //         }else{
+                //             if (!isNaN(parseFloat($(data).find('input[name="manual-charge"]').val()))) {
+                //                 if (!$('.chk-tailgate[name="pickup"]').is(":checked") && !$('.chk-tailgate[name="delivery"]').is(":checked")) {
+                //                     var manualCharge = parseFloat($(data).find('input[name="manual-charge"]').val());    
+                //                     wTgPrice = wTgPrice + (manualCharge * 1.1);
+                //                 }
+                //             }
+                //         }
+                //     }
+                    
+                //     wTgPrice += tailGateCost;
+                //     $(".data-"+tgCourier).find('.total-price').html('$' + wTgPrice.toFixed(2));
+
+                //     $.each(sortedQuotes, function( k, v ) {
+                //         if(v.id.split('-')[1] == tgCourier){
+                //             v.value = wTgPrice;
+                //         }
+                //     });
+                // }
+                //end new tailgate
+
+                 // If this is first item, prepend it immediately #list-quotes
+                if (sortedQuotes.length == 1) {
+                    $('#list-quotes').prepend(data);
+                } else {
+                    sortedQuotes.sort((function(a,b){ 
+                        if(a.value == b.value){
+                            return ('' + a.id).localeCompare(b.id);
+                        }
+                        return (a.value-b.value); 
+                    }));
+                    var previousId = 0;
+                    for (i=0; i<sortedQuotes.length; i++) {
+                        if (sortedQuotes[i].id == ('data-'+courier)) {
+                            if (i == 0) { // It's the first item
+                                $('#list-quotes').prepend(data);
+                            } else {
+                                $('#' + previousId).after(data);
+                            }
+                        }
+
+                        previousId = sortedQuotes[i].id;
+                    }
+                }
+
+                if ($('input.chk-tailgate').length > 0) {
+                    executeTailGate();    
+                }
+                
+                $('#'+courier+'-alternative-popover').popover();
+                if($('#toll-alternative-popover').length >0){
+                    $('#toll-alternative-popover').popover();
+                }
+
+                $('.link-add-insurance').on('click', function(e){
+                    $('#block-insurance').removeClass('hidden');
+                    $('#txt-insurance').focus();
+                    return true;
+                });
+
+                if(couriersExcludedFromTailLift.indexOf(courier) >= 0 ) {
+                    if($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked") ){
+                        $("#data-"+courier).hide();
+                    }
+                }
+
+                var responseTimeData = {
+                    'booking_id': '11663188',
+                    'response_time' : new Date().getTime() - timeStart[courier],
+                    'courier' : courier
+                }
+
+                $.ajax({
+                    url: '/quotes/bookings/saveCourierResponseTime',
+                    method: 'POST',
+                    data: responseTimeData,
+                    success: function(data) {
+                        // console.log(courier + ' ' + (responseTimeData.response_time/1000));
+                    }
+                });
+
+                if(multipickup_allowed == '0') {
+                    $('.multi_check_tab').css('opacity', '0.8');
+                    $('.multi_check_tab').css('cursor', 'pointer');
+                    $('.multi_check_tab').find("input[type='radio']").prop('disabled',true);
+                    $('.multi_check_tab').find("input[type='radio']").css('cursor', 'pointer');
+                    $('.multi_check_tab').find("input[type='radio']").css('pointer-events','none');
+                } else {
+                    $('.multi_check_tab').css('opacity', '1');
+                    $('.multi_check_tab').css('cursor', '');
+                    $('.multi_check_tab').find("input[type='radio']").prop('disabled',false);
+                    $('.multi_check_tab').find("input[type='radio']").css('cursor', 'default');
+                }
+            })
+            .fail(function(data){
+                $('#loader-'+courier).remove();
+            })
+            .always(function(data){
+                                bind_forms()
+            });
+    }
+
+    var sortQuotes = function(category){
+        switch(category){
+            case 'price':
+                sortedQuotes.sort((function(a,b){ 
+                    if(a.value == b.value){
+                        return ('' + a.id).localeCompare(b.id);
+                    }
+                    return (a.value-b.value); 
+                }));
+                break;
+            case 'delivery':
+                sortedQuotes.sort((function(a,b){
+                    if(a.delivery == b.delivery)
+                        return (a.value-b.value);
+                    return (a.delivery-b.delivery);
+                }));
+                break;
+            case 'pickup':
+                sortedQuotes.sort((function(a,b){
+                    if(a.pickup == b.pickup)
+                        return (a.value-b.value);
+                    return (a.pickup-b.pickup);
+                }));
+                break;
+        }
+
+        for (i=sortedQuotes.length - 1; i >= 0 ; i--) {
+            $('#' + sortedQuotes[i].id).prependTo($('#list-quotes'));
+        }
+        $('.btn-sort').removeClass('btn-warning');
+        $('.btn-sort').addClass('btn-default');
+        $('.btn-sort.btn-' + category ).addClass('btn-warning');
+    }
+
+    //new tailgate: proccess upon submit form
+    //find bind_forms() function
+    $('.chk-tailgate').on('click', function(e){
+        totalTailgate = $('.chk-tailgate:checked').length;
+        executeTailGate();
+        // $('.table-data').find('.total-price').each(function(){
+        //     var currentPrice = parseFloat($(this).parents('form').find('input[name="price-less-tailgate"]').val());            
+        //     var courier = $(this).closest('.data-content').attr('id').split('-')[1];
+        //     var deliveryTailGateCost = 0;
+        //     var pickupTailGateCost = 0;
+
+        //     //Add courier condition here to exclude tail lift servise e.g. CP
+        //     if(couriersExcludedFromTailLift.indexOf(courier) < 0 ){
+        //         var tailGateCost = 0;
+        //         if (courier == 'sampson_express') {
+        //             var pickupTG = parseFloat($(this).parents('form').find('input[name="pickuptg"]').val());
+        //             var deliveryTG = parseFloat($(this).parents('form').find('input[name="deliverytg"]').val());
+        //             if($('.chk-tailgate[name="pickup"]').is(":checked")){
+        //                 tailGateCost += pickupTG;
+        //             }
+        //             if($('.chk-tailgate[name="delivery"]').is(":checked")){
+        //                 tailGateCost += deliveryTG;
+        //             }
+        //         } else {
+        //             if(tailgateCosts[courier]['singleCharge'] == 1){
+        //                 if($('.chk-tailgate').is(":checked")){
+        //                     tailGateCost += tailgateCosts[courier]['pickup'];
+        //                     pickupTailGateCost = tailgateCosts[courier]['pickup'];
+        //                 }
+        //             }else{
+        //                 if($('.chk-tailgate[name="pickup"]').is(":checked")){
+        //                     tailGateCost += tailgateCosts[courier]['pickup'];
+        //                     pickupTailGateCost = tailgateCosts[courier]['pickup'];
+        //                 }
+        //                 if($('.chk-tailgate[name="delivery"]').is(":checked")){
+        //                     tailGateCost += tailgateCosts[courier]['delivery'];
+        //                     deliveryTailGateCost = tailgateCosts[courier]['delivery'];
+        //                 }
+        //             }
+        //             if(tailgateCosts[courier]['newPrice'] == 1){
+        //                 if($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked")) {
+        //                     var newPrice = parseFloat($(this).parents('form').find('input[name="new-price-with-tailgate"]').val());
+        //                     $(this).html('$' + newPrice.toFixed(2));
+        //                 }else{
+        //                     $(this).html('$' + currentPrice.toFixed(2));
+        //                 }
+        //             }else{
+        //                 if (!isNaN(parseFloat($(this).parents('form').find('input[name="manual-charge"]').val()))) {
+        //                     if (!$('.chk-tailgate[name="pickup"]').is(":checked") && !$('.chk-tailgate[name="delivery"]').is(":checked")) {
+        //                         var manualCharge = parseFloat($(this).parents('form').find('input[name="manual-charge"]').val());    
+        //                         currentPrice = currentPrice + (manualCharge * 1.1);
+        //                     }
+        //                 }
+        //             }
+        //         }
+
+        //         currentPrice += tailGateCost;
+        //         $(this).html('$' + currentPrice.toFixed(2));
+
+        //         $.each(sortedQuotes, function( k, v ) {
+        //             // console.log(v.id.split('-')[1] + " == " + courier);
+        //             if(v.id.split('-')[1] == courier){
+        //                 v.value = currentPrice;
+        //             }
+        //         });
+        //         sortQuotes($(".sort-btn").find(".btn-warning")[0].id);
+        //     } else {
+        //         if($('.chk-tailgate[name="pickup"]').is(":checked") || $('.chk-tailgate[name="delivery"]').is(":checked") ){
+        //             $('#data-'+courier).hide();
+        //         } else {
+        //             $('#data-'+courier).show();
+        //         }
+        //     }
+        // });
+    });
+
+    $('#txt-insurance').autoNumeric('init');
+
+    
+    for (var i=0; i < couriersList.length; i++) {
+        var isLast = false;
+
+        if (i + 1 >= couriersList.length) {
+            isLast = true;
+        }
+        fetchQuotes(couriersList[i], isLast);
+        // console.log(couriersList[i]);
+    }
+    
+    $(document).on('change','.pickup-times', function(){
+        var $parent = $(this).parents('.data-content');
+        var $pickup_time = $parent.find('[name="pickup-time"]');
+        if($pickup_time.length != 0){
+            $pickup_time.val($(this).val());
+        }
+    });
+
+    ajaxArray  =  [];
+
+    var user_loggedIn = 0;
+
+    $('#btn-save-quote').click(function(e){
+        e.preventDefault();
+        if(user_loggedIn){
+            save_quote($(this));
+        }else{
+            $('#modal-get-email').modal('show');
+        }
+    });
+
+    $(document).on('click', '#save-quote-btn', function(e){
+        e.preventDefault();
+        if($('.quote-email').valid()){
+            $('#modal-get-email #close').click();
+            save_quote($('#btn-save-quote'), $('.quote-email').val());
+            $('.quote-email').val('');
+        }
+    });
+
+    function save_quote(savebtn, email){
+        var quote_data = {};
+        $('#list-quotes .data-content').each(function(){
+            if($(this).find('.disabled').length == 0){
+                id = $(this).attr("id");
+                id = id.replace('data-', '');
+                quote_data[id] = {
+                    'time' : $(this).find(".data-time").html(),
+                    'pickup' : $(this).find(".data-pickup").html(),
+                    'insurance' : $(this).find(".data-insurance").html(),
+                    'insurance_value' : $(this).find(".data-insurance .insurance").text(),
+                    'show_max_value':($(this).find(".data-insurance .note").hasClass('hidden'))?0:1,
+                    'price' : $(this).find(".total-price").html(),
+                    'insurance_fee' : $(this).find('.insurance-fee').html()
+                };
+            }
+        });
+
+        savebtn.attr("disabled", "disabled");
+        sSource  =  '/quotes/bookings/saveQuote';
+        $current  =  savebtn;
+
+
+
+        if(ajaxArray)  {
+            for  (i  in  ajaxArray)  {
+                ajaxArray[i].req.abort();
+            }
+        }
+
+        $current.before('<img  src="/images/ajax-loader.gif"  class="save-quote-loader  pull-left">');
+
+        ajaxr  = $.ajax({
+            type  :  "POST",
+            dataType  :  'html',
+            url  :  sSource,
+            data  :  {booking_id : 11663188, quotes : JSON.stringify(quote_data), 'email' : email},
+            success  :  function  (response)  {
+                respons_data  =  JSON.parse(response);
+                $(".save-quote-loader").fadeOut();
+                $(".save-quote-loader").remove();
+                if(respons_data.quote_saved){
+                    //message  =  "Quote  saved  successfully";
+                    $('#modal-save-quote').modal('show');
+                }else{
+                    message  =  "Quote  not  successfully";
+                    $current.before("<p  class='save-quote  text-success  pull-left'>"+message+"</p>");
+                }
+
+
+                setTimeout(function(){
+                    $('.save-quote').fadeOut();
+                    $('.save-quote').remove();
+                    $current.removeAttr("disabled");
+                },  5000);
+
+                ajaxArray.length = 0;
+            },
+            error:  function(){
+                alert("Something  went  wrong?");
+                $(".save-quote-loader").fadeOut();
+                $(".save-quote-loader").remove();
+            }
+        });
+
+        ajaxArray.push({
+            req:  ajaxr
+        });
+    }
+
+    var confirmDocumentOnly = false;
+    var confirmTntDocumentOnly = false;
+    var confirmForm = null;
+    function bind_forms(){
+        $("[role='form']:not([action='#'])").unbind("submit");
+        $("[role='form']:not([action='#'])").on('submit', function(e){
+            if(confirmDocumentOnly) return true;
+            if(confirmTntDocumentOnly) return true;
+            if($(this).attr("action").search('toll_priority_international_document_export') >= 0){
+                confirmForm = $(this);
+                $('#confirm-document-only').modal('show');
+                return false;
+            }
+            if($(this).attr("action").search('tnt_international_economy_express_document_export') >= 0 || $(this).attr("action").search('tnt_international_economy_express_document_import') >= 0 || $(this).attr("action").search('tnt_international_express_document_export') >= 0 || $(this).attr("action").search('tnt_international_express_document_import') >= 0){
+                confirmForm = $(this);
+                $('#confirm-tnt-document-only').modal('show');
+                return false;
+            }
+
+            if($(this).attr("action").search('fastway') >= 0){
+                if($("input[name='multipickup_type']:checked").val() == '1'){
+                    confirmForm = $(this);
+                    $('#multipickup_tire').html('Multipickup '+fastway_multipickup_limit);
+                    $('#multipickup_courier').html('Fastway');
+                    $('#multipickup-confirm-modal').modal('show');
+                    return false;
+                }
+            }
+
+            if($(this).attr("action").search('couriers_please') >= 0 || $(this).attr("action").search('couriers_please_domestic_proirity_signature') >= 0 || $(this).attr("action").search('couriers_please_domestic_proirity_authority') >= 0){
+                var multipickup_tire = '0';
+                if($(this).attr("action").search('couriers_please_domestic_proirity_signature') >= 0) {
+                    multipickup_tire = $("input[name='cps_multipickup_type']:checked").val();
+                }else if ($(this).attr("action").search('couriers_please_domestic_proirity_authority') >= 0) {
+                    multipickup_tire = $("input[name='cpa_multipickup_type']:checked").val();
+                } else {
+                    multipickup_tire = $("input[name='cp_multipickup_type']:checked").val();
+                }
+                if(multipickup_tire == '1')
+                {
+                    confirmForm = $(this);
+                    $('#multipickup_tire').html('Multipickup '+cp_multipickup_a_limit);
+                    $('#multipickup_courier').html('Couriers Please');
+                    $('#multipickup-confirm-modal').modal('show');
+                    return false;
+                }else if (multipickup_tire == '2') {
+                    confirmForm = $(this);
+                    $('#multipickup_tire').html('Multipickup '+cp_multipickup_b_limit);
+                    $('#multipickup_courier').html('Couriers Please');
+                    $('#multipickup-confirm-modal').modal('show');
+                    return false;
+                }
+            }
+
+            var tailgates = $('.chk-tailgate');
+            $.each(tailgates, function(key, value){
+                if ($(value).is(':checked')){
+                   tailgate_value = 1;
+                } else { // take back that 75
+                   tailgate_value = 0;
+                }
+                $.ajax({
+                    url: '/quotes/bookings/11663188/tailgate/',
+                    method: 'POST',
+                    data: {
+                        type: $(value).attr('name'),
+                        value: tailgate_value
+                    },
+                    async: false
+                });
+            });
+        });
+    }
+
+    function submitConfirmedForm(){
+        if(confirmForm == null) return false;
+        confirmDocumentOnly = true;
+        confirmForm.trigger('submit');
+    }
+
+    function submitTntConfirmedForm(){
+        if(confirmForm == null) return false;
+        confirmTntDocumentOnly = true;
+        confirmForm.trigger('submit');
+    }
+
+    $(document).on('click','.disabled_multipickup', function(){
+        $('#multipickup-nonuser-modal').modal();
+    })
+
+            $(document).on('click','.multi_check_tab', function(){
+            $('#rastrict-nonaddress-Multipickup').modal();
+        })
+    
+</script>
+<div class="modal fade" id="modal-save-quote">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Quote saved successfully</h4>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for saving this quote. An email has been sent with a link to return to this position when required.</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<form action="#">
+    <div class="modal fade" id="modal-get-email">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Save Quote SPRINGVALE, VIC, 3171, Australia to MURDOCH, WA, 6150, Australia</h4>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <div class="form-group"><label for="Email" class="col-lg-3 control-label" template="label-required">Email<span class="text-danger">*</span></label><input type="text" name="email" class="modal-field form-control required quote-email email" id="Email" placeholder="Email" /></div>                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="close" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="save-quote-btn">Save this Quote</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</form>
+
+<div class="modal fade" id="confirm-document-only">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Toll Priority International Document Export</h4>
+            </div>
+            <div class="modal-body">
+                <p>You have selected a DOCUMENT ONLY service. If your delivery contains any other items it will be delayed by customs and charges may apply.</p>
+               <br/>
+               <p>Do you confirm the contents of your delivery are DOCUMENTS ONLY?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" onclick="submitConfirmedForm();">Yes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="confirm-tnt-document-only">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Tnt International Document Service</h4>
+            </div>
+            <div class="modal-body">
+                <p>You have selected a DOCUMENT ONLY service. If your delivery contains any other items it will be delayed by customs and charges may apply.</p>
+               <br/>
+               <p>Do you confirm the contents of your delivery are DOCUMENTS ONLY?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" onclick="submitTntConfirmedForm();">Yes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Multipickup rastriction for non address book -->
+<div class="modal fade" id="rastrict-nonaddress-Multipickup">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="text-align: center; margin-top: 0px;">You are about to book a Multipickup rate.</h4>
+            </div>
+            <div class="modal-body" style="text-align: center; padding: 10px 20px; font-size: 15px; font-weight: 600;">
+               <p style="margin-bottom: 0px;">Multipickup can only be booked if you have selected a pickup address stored in your address book.</p>
+               <p style="margin-bottom: 0px;">Please press 'Change pickup' and select an address from your Address Book. If you don't have the address saved, you can add it to your Address Book  <a href="/members_new/addresses/add" title="">here</a></p>
+            </div>
+            <input type="hidden" id="multipickup_courier_data">
+            <div class="modal-footer">
+                <div class="col-sm-6 text-left">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a class="btn btn-success" href="/quotes/bookings/11663188">Change Pickup</a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Multipickup confirmation modal -->
+<div class="modal fade" id="multipickup-confirm-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="text-align: center;">You are about to book a <span id="multipickup_tire"></span> rate.</h4>
+            </div>
+            <div class="modal-body" style="text-align: center; padding: 10px 20px; font-size: 15px; font-weight: 700;">
+               <p style="margin-bottom: 0px; padding-bottom: 0px;">Collection Date and Time will be selected from the <span id="multipickup_courier"></span> Multipickup section in your Member's Area once you have met the minimum booking number requirement.</p>
+            </div>
+            <input type="hidden" id="multipickup_courier_data">
+            <div class="modal-footer">
+                <div class="col-sm-6 text-left">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <button class="btn btn-success" type="button" onclick="submitConfirmedForm()">Ok</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Multipickup non user modal -->
+<div class="modal modal-sm fade" id="multipickup-nonuser-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" style="text-align: center; margin-top: 0px;">Transdirect Membership Required</h4>
+            </div>
+            <div class="modal-body" style="text-align: center; padding: 10px 20px; font-size: 15px;">
+               <p style="margin-bottom: 0px; padding-bottom: 0px;">You must be a Transdirect Member to use this Multipickup service. You can open a Free account <a href="/education/account-enquiries/">here</a> and take advantage of discounted rates and access to all our Member benefits.</p>
+            </div>
+            <input type="hidden" id="multipickup_courier_data">
+            <div class="modal-footer" style="padding: 9px;">
+                <div class="col-sm-6 text-left">
+                </div>
+                <div class="col-sm-6 text-right">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row noco2-footer">
+                    <div class="text-center">
+                        <img src="/images/logos/CN_Service_Logo.png" class="noco2-logo" style="width: 100px !important;">
+                        <h4 class="text-white">All Transdirect parcel delivery services are certified Carbon Neutral.<br/>
+                        Saving more than your bottom line.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-col">
+                    <div class="logo-icon"></div>
+                </div>
+                <div class="footer-col">
+                    <div class="heading-border footer-nav-trigger">
+                        <h5>SERVICES</h5>
+                    </div>
+                    <div class="footer-nav-dropdown">
+                        <ul class="nav footer-nav">
+                            <li><a href="/services/interstate-couriers/">Interstate couriers</a></li>
+                            <li><a href="/same-day-delivery/">Same Day Delivery</a></li>
+                            <li><a href="/services/next-day-delivery/">Next Day / Overnight Delivery</a></li>
+                            <li><a href="/services/parcel-delivery/">Parcel Delivery</a></li>
+                            <li><a href="/services/parcel-delivery/">Parcel Point</a></li>
+                            <li><a href="/education/ecommerce/">Ecommerce</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="heading-border footer-nav-trigger">
+                        <h5>COURIERS</h5>
+                    </div>
+                    <div class="footer-nav-dropdown">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-6">
+                                <ul class="nav footer-nav">
+                                    <li><a title="Direct Couriers" href="/courier/direct-couriers/">Direct Couriers</a></li>
+                                    <li><a title="TNT" href="/courier/tnt/">TNT</a></li>
+                                    <li><a title="Toll" href="/courier/toll/">Toll</a></li>
+                                    <li><a title="Toll Priority" href="/courier/toll-priority/">Toll Priority</a></li>
+                                    <li><a title="Allied Express Couriers" href="/courier/allied-express/">Allied Express Couriers</a></li>
+                                    <li><a title="Couriers Please Freight" href="/courier/couriers-please/">Couriers Please Freight</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <ul class="nav footer-nav">
+                                    <li><a href="/courier/fastway/">Fastway</a></li>
+                                    <li><a href="/courier/northline/">Northline</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="heading-border footer-nav-trigger">
+                        <h5>LOCATIONS</h5>
+                    </div>
+                    <div class="footer-nav-dropdown">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-6">
+                                <ul class="nav footer-nav">
+                                    <li><a href="/locations/sydney/">Sydney</a></li>
+                                    <li><a href="/locations/melbourne/">Melbourne</a></li>
+                                    <li><a href="/locations/brisbane/">Brisbane</a></li>
+                                    <li><a href="/locations/perth/">Perth</a></li>
+                                    <li><a href="/locations/adelaide/">Adelaide</a></li>
+                                    <li><a href="/locations/canberra/">Canberra</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <ul class="nav footer-nav">
+                                    <li><a href="/locations/gold-coast/">Gold Coast</a></li>
+                                    <li><a href="/locations/sunshine-coast/">Sunshine Coast</a></li>
+                                    <li><a href="/locations/geelong/">Geelong</a></li>
+                                    <li><a href="/locations/hobart/">Hobart</a></li>
+                                    <li><a href="/locations/darwin/">Darwin</a></li>
+                                    <li><a href="javascript:void(0)">Australia Wide</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="heading-border footer-nav-trigger">
+                        <h5>SUPPORT</h5>
+                    </div>
+                    <div class="footer-nav-dropdown">
+                        <ul class="nav footer-nav">
+                            <li><a href="/contact-us/">Contact Us</Us></a></li>
+                            <li><a href="/education/tracking/">Tracking</a></li>
+                            <li><a href="/education/faqs/">FAQs</a></li>
+                            <li><a href="/education/testimonials/">Testimonials</a></li>
+                            <li><a href="/education/account-enquiries/">Open an account</a></li>
+                            <li><a href="https://transdirect.us6.list-manage.com/subscribe/post?u=77dfaca648&id=7cc9bbdb34">Newsletter sign-up</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="contact-support">
+                        <h5>CUSTOMER SUPPORT</h5>
+                        <p class="hotline">1300 668 229</p>
+                        <ul class="nav footer-nav">
+                            <li><a href="/contact-us/">Contact us</a></li>
+                            <li><a href="/features/about-us/">About Transdirect</a></li>
+                            <li><a title="Terms and Conditions" href="/terms-and-conditions/">Terms and Conditions</a></li>
+                        </ul>
+                        <ul class="nav footer-nav">
+                            <li>&copy; 2008-2020 TransDirect</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.footer-nav-trigger').on('click', function() {
+                    var thisNext = $(this).next();
+                    if (thisNext.is(':hidden')) {
+                        $('.footer-nav-dropdown').slideUp(300);
+                        thisNext.slideDown(300);
+                    } else {
+                        thisNext.slideUp(300);
+                    }
+                });
+            });
+        </script>
+    </footer>
+        
+            <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5216881"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5216881&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+    
+<!-- Start account popup Modal -->
+            <div id="accountPopUpModal" class="modal fade popup-v1" role="dialog">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="text-center">
+                    <h4 class="header-banner">Before you click..</h4>
+                    <h1 class="discount-banner">SAVE 10-30%</h1>
+                </div>
+                
+            </div>
+            <div class="modal-body text-center">
+                <p class="previlages-banner">With a FREE Transdirect account</p>
+                <ul class="list-unstyled previlages-list">
+                    <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>1-minute sign up</li>
+                    <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>Instant Approval</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.transdirect.com.au/education/account-enquiries/" class="btn" onclick="gtag('event', 'redirect', {'event_category' : 'popup-account-inquiry', 'event_label': 'visit account enquiries page'});">Click here to save now</a>
+            </div>
+        </div>
+    </div>
+</div>    <script type="text/javascript">
+    $(document).on('ready', function() {
+        var showed = true;
+        var popupTimer = setTimeout(function(){ showed = false; }, 5000);
+        $(this).on('mouseleave', function(){ showPopupModal(); });
+        $(this).find('input').each(function(){ $(this).on('keypress', function(){ stopTimer(); });});
+        $('.link-add-insurance').each(function(){ $(this).on('click', function(){ stopTimer() }); });
+        function showPopupModal() {
+            if (!showed) { 
+                $('#accountPopUpModal').modal('toggle');
+                stopTimer();
+            } 
+        }
+        function stopTimer() { if (popupTimer) { clearTimeout(popupTimer);} showed = true; }
+    });
+</script>
+<!-- End account popup Modal -->
+
+<!-- Code for ebay and paypal auto sync after login -->
+<script type="text/javascript">
+    var auto_sync = '';
+    var sync_url  = "/members_new/orders/autoSync";
+</script>
+
+<script type="text/javascript" src="/js/members/auto.sync.js"></script>
+<div id="popupQuoteExpired" class="modal fade popup-v1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <div class="text-center">
+                    <h1 class="discount-banner">Quote Session Expired</h1>
+                </div>
+                
+            </div>
+            <div class="modal-body text-center">
+                <p style="padding: 5px 15px;">
+                    You have reached the 30 minutes validality of <br>
+                    Transdirect Sameday Delivery service.<br><br>
+
+                    To generate a new quote please click the button below. <br>
+                    This will redirect you to the quote page and refresh your quote token.<br>
+                    Please do not worry as the details you input will already be prefilled
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.transdirect.com.au/quotes/bookings/11663188/quotes/">Generate a New Quote</a>
+            </div>
+        </div>
+    </div>
+</div><script type="text/javascript">
+    $(document).ready(function(){
+        var quoteExpiry = setInterval(function(){
+            if ($('span#quoteCountDown').length > 0) {
+                var expiry = parseInt($('span#countdown').attr('data-time'));
+                var min     = Math.floor(expiry / 60);
+                var remSec  = expiry % 60;
+
+                if (remSec < 10) { remSec = '0' + remSec; }
+                if (min < 10) { min = '0' + min;}
+
+                if (expiry > 0) {
+                    var quoteContent = '';
+                    quoteContent += min+'m ';
+                    quoteContent += remSec+'s';
+                    expiry = expiry - 1;
+                    $('span#countdown').html(quoteContent);
+                    $('span#countdown').attr('data-time', expiry);
+                } else {
+                    $('span#countdown').html('Expired');
+                    if ($('#popupQuoteExpired').length > 0 && ($('input[name="courier"]').val() == 'go_people' || $('select[name="pickup_date_go_people"]').length > 0 )) {
+                        clearInterval(quoteExpiry);
+                        $('span#countdown').attr('data-time', 0);
+                        $('#popupQuoteExpired').modal('toggle');
+                    }
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+    <script type="text/javascript">
+        $(document).on('click', 'input, select', function(){
+            gtag('event', 'Get Quote', {'event_category' : 'Quotes'});
+        });
+    </script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c29935b8b3","applicationID":"35504947","transactionName":"M1ZbYUQDVhVWVEdeVgocbEdfTVEIU1JLGUkMQw==","queueTime":0,"applicationTime":195,"atts":"HxFYFwwZRRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
